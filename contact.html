@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+	<head>
+		<title>The Office Deli Contact- </title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<style>
+		  form{
+				color: #310c00;
+				border-radius: 20px;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 20px;
+				text-shadow: 2px 2px #b2b2b2;
+				background-repeat: no-repeat;
+			}
+
+			input{
+				border: 2px solid #310c00;
+				border-radius: 5px;
+				background-color: #ffe4e1;
+			}
+
+			input[type=number]{
+				background-color: #d2d5d2;
+			}
+
+			textarea {
+				border: 2px solid #310c00;
+				background-color: #ffe4e1;
+			}
+
+			.red {
+				color: #aa0000;
+			}
+
+			.validation {
+				background-color: #d2d5d2;
+				color: #808000;
+				width: 10%;
+			}
+		</style>
+	</head>
+
+		<body>
+			<header>
+				<img src="images/logo.png" alt="The Office Deli's green Logo with name and sandwich image" width="180" height="138">
+				<h1>The Office Deli <br> Contact Us</h1>
+			</header>
+
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="aboutus.html">About Us</a></li>
+					<li><a href="history.html">History</a></li>
+					<li><a href="menu.html">Menu</a></li>
+					<li><a href="bakery.html">Bakery</a></li>
+					<li><a href="chef.html">Chef</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+
+
+			<main>
+				<h2>Your Opinion Is Important to Us</h2>
+
+
+				<form action="" method="post" autocomplete="on">
+					<h3> Enter your information beginning by selecting a prefix from the box below</h3>
+
+
+
+					<select name="prefix">
+						<option value="">Select One</option>
+						<option value="mr">Mr</option>
+						<option value="mrs">Mrs</option>
+						<option value="other">Other</option>
+					</select>
+					<br><br>
+
+					<label>First Name:<span class="red">*</span></label>
+					<input type="text" name="fname" required><br><br>
+					<label>Last Name:<span class="red">*</span></label>
+					<input type="text" name="lname" required> <br><br>
+					<label>Email Address:<span class="red">*</span></label>
+					<input type="email" name="email" autocomplete="off" required><br><br>
+					<label>Phone Number:</label>
+					<input type="tel" name="phone"><br><br>
+
+					<h3>Gender:</h3>
+					<input type="radio" name="gender" value="male">Male<br>
+					<input type="radio" name="gender" value="female">Female<br>
+					<input type="radio" name="gender" value="other">Other
+					<br><br>
+
+					<h3>Select your favorite items</h3>
+					<input type="checkbox" name="favorites" value="macho">Macho Club<br>
+					<input type="checkbox" name="favorites" value="club">Club Sandwich<br>
+					<input type="checkbox" name="favorites" value="panini">Panini<br>
+					<input type="checkbox" name="favorites" value="dinner">Dinner Meal
+					<br><br>
+
+					<script>
+					function myFunction() {
+						var inpObj = document.getElementById("id1");
+						if (inpObj.checkValidity() == false) {
+							document.getElementById("passcode").innerHTML =
+          inpObj.validationMessage;
+             } else {
+							 document.getElementById("passcode").innerHTML = "Passcode Valid";
+						 }
+					 }
+				 </script>
+
+					<h3>Please enter the date and your comments below.</h3>
+					<label>Date:</label>
+					<input type="date" value="">
+					<br><br>
+					<p>Comments:</p>
+					<textarea name="comments" rows="10" cols="60"></textarea>
+					<br><br>
+
+					<input type="checkbox" name="newsletter" value="subscribe">Subscribe to our Newsletter
+					<br><br>
+
+
+
+					<input type="reset" value="Reset Form">
+
+					<input type="submit" value="Submit">
+				</form>
+
+				<form action="" method="post">
+
+					<h3>Enter your four-digit passcode, then click OK:</h3>
+
+					<input id="id1" type="number" min="1000" max="9999">
+					<button onclick="myFunction()" type="button">OK</button>
+					<p id="passcode" class="validation"></p>
+				</form>
+
+			</main>
+
+			<footer>
+				<p><a href="index.html">Home</a> | <a href="aboutus.html">About Us</a> | <a href="history.html">History</a> | <a href="menu.html">Menu</a> | <a href="bakery.html">Bakery</a> | <a href="chef.html">Chef</a> | <a href="contact.html">Contact us</a></p>
+			</footer>
+		</body>
+</html>
